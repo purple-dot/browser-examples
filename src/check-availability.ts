@@ -5,7 +5,7 @@ export async function getStockForProduct(variantId: string): Promise<{ quantity:
     const product = products.find((p) => p.variantId === variantId);
 
     setTimeout(() => {
-      if (product?.state === 'Out of Stock') {
+      if (product?.state !== 'In Stock') {
         resolve({ quantity: 0 });
       }
 

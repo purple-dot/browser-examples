@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router';
 import { products } from '../assets/products';
-import { AddToCardButton } from '../components/add-to-cart/AddToCardButton';
+import { AddToCartButton } from '../components/add-to-cart/AddToCartButton';
 
 export function ProductDisplay() {
   const { id } = useParams();
@@ -57,7 +57,7 @@ export function ProductDisplay() {
           </div>
 
           <div className='space-y-4'>
-            <AddToCardButton product={product} />
+            <AddToCartButton product={product} />
           </div>
         </div>
       </div>

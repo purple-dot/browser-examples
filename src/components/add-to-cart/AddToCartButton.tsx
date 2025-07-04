@@ -6,7 +6,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { getStockForProduct } from '../../check-availability';
 import { availability } from '@purple-dot/browser/availability';
 
-export function AddToCardButton({ product }: { product: Product }) {
+export function AddToCartButton({ product }: { product: Product }) {
   const [loading, setLoading] = useState(true);
   const [outOfStock, setOutOfStock] = useState(false);
   const [preOrderReleaseId, setPreOrderReleaseId] = useState<string | null>(null);
