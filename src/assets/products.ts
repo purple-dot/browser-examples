@@ -1,15 +1,16 @@
-export interface Product {
+export type ProductState = 'Pre-order' | 'In Stock' | 'Out of Stock' | 'Express';
+
+export type Product = {
   id: number;
   name: string;
   description: string;
-  state: 'Pre-order' | 'In Stock' | 'Out of Stock' | 'Express';
+  state: ProductState;
   price: {
     amount: number;
     currency: string;
   };
   image: string;
   variantId: string;
-  releaseId: string;
 }
 
 export const products: Product[] = [
@@ -23,8 +24,7 @@ export const products: Product[] = [
       currency: 'USD',
     },
     image: 'https://purple-dot-demo-us.myshopify.com/cdn/shop/files/PurpleSocks.webp?v=1742300404',
-    variantId: '50884155801947',
-    releaseId: '8adf88ec-8211-4470-8fb3-cb8e4f4ac726',
+    variantId: '50954064593201',
   },
   {
     id: 2,
@@ -36,8 +36,7 @@ export const products: Product[] = [
       currency: 'USD',
     },
     image: 'https://purple-dot-demo-us.myshopify.com/cdn/shop/files/Screenshot2025-02-05at3.36.46PM.png?v=1738787814',
-    variantId: '50884155801947',
-    releaseId: '8adf88ec-8211-4470-8fb3-cb8e4f4ac726',
+    variantId: '50685963731249',
   },
   {
     id: 3,
@@ -49,8 +48,7 @@ export const products: Product[] = [
       currency: 'USD',
     },
     image: 'https://purple-dot-demo-us.myshopify.com/cdn/shop/files/yellowhoodie.jpg?v=1734006834',
-    variantId: '50884155801947',
-    releaseId: '8adf88ec-8211-4470-8fb3-cb8e4f4ac726',
+    variantId: '50446290551089',
   },
   {
     id: 4,
@@ -62,7 +60,6 @@ export const products: Product[] = [
       currency: 'USD',
     },
     image: 'https://purple-dot-demo-us.myshopify.com/cdn/shop/files/Black_Tee_Front_1024x1024_2x_e2e7e3df-32f3-41c7-a092-549141cd038c.webp?v=1700669997',
-    variantId: '50884155801947',
-    releaseId: '8adf88ec-8211-4470-8fb3-cb8e4f4ac726',
+    variantId: '47818256744753',
   }
 ];

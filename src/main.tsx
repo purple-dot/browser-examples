@@ -8,7 +8,7 @@ import { Layout } from './components/Layout.tsx';
 import * as PurpleDot from '@purple-dot/browser';
 
 PurpleDot.init({
-  apiKey: '5ce2721b-6eb4-4ab3-a3c8-2261090922a2',
+  apiKey: '394ceb41-2fe5-4f36-8232-f390b49954b1',
 });
 
 createRoot(document.getElementById('root')!).render(
