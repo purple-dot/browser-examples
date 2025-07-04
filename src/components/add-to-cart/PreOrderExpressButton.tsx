@@ -2,7 +2,7 @@ import type { Product } from '../../assets/products';
 import { useCallback, useState } from 'react';
 import { openExpressCheckout } from '@purple-dot/browser/checkout';
 import { ErrorMessage } from '../ErrorMessage';
-import { Brand } from '../Brand';
+import { LearnMore } from '../LearnMore';
 
 export function PreOrderExpressButton({ product }: { product: Product }) {
   const [error, setError] = useState<string | null>(null);
@@ -29,7 +29,7 @@ export function PreOrderExpressButton({ product }: { product: Product }) {
         Pre-order (Express)
       </button>
 
-      <Brand />
+      <LearnMore />
 
       {error && <ErrorMessage error={error} />}
     </>
