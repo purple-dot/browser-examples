@@ -30,31 +30,30 @@ export function AddToCartButton({ product }: { product: Product }) {
     })();
   }, [product.variantId, availabilityCallback]);
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  if (!loading) {
+    if (product.state === 'Express' && preOrderReleaseId) {
+      return <PreOrderExpressButton product={product} releaseId={preOrderReleaseId} />;
+    }
 
-  if (product.state === 'Express' && preOrderReleaseId) {
-    return <PreOrderExpressButton product={product} releaseId={preOrderReleaseId} />;
-  }
+    if (preOrderReleaseId) {
+      return <PreOrderButton product={product} releaseId={preOrderReleaseId} />;
+    }
 
-  if (preOrderReleaseId) {
-    return <PreOrderButton product={product} releaseId={preOrderReleaseId} />;
-  }
-
-  if (outOfStock) {
-    return <OutOfStockButton />;
+    if (outOfStock) {
+      return <OutOfStockButton />;
+    }
   }
 
   return (
     <button
       type='button'
-      className='bg-purple-600 w-full text-white py-3 px-6 rounded-lg font-semibold hover:bg-purple-700 transition-colors'
+      disabled={loading}
+      className='bg-purple-600 w-full text-white py-3 px-6 rounded-lg font-semibold hover:bg-purple-700 transition-colors disabled:opacity-50'
       onClick={() => {
         alert('Added to main cart');
       }}
     >
-      Add to cart
+      {loading ? 'Loading...' : 'Add to cart'}
     </button>
   );
 }
