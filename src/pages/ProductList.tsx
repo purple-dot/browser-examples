@@ -11,9 +11,9 @@ export function ProductList() {
           <div key={product.id} className='bg-white rounded-lg border border-gray-200 overflow-hidden'>
             <Link to={`/products/${product.id}`}>
               <img src={product.image} alt={product.name} className='w-full h-80 object-cover object-top' />
-              <div className='p-4'>
+              <div className='p-4 space-y-2'>
                 <h2 className='text-lg font-semibold'>{product.name}</h2>
-                <p className='text-gray-600 mt-2'>{product.price.amount.toFixed(2)} {product.price.currency}</p>
+                <p>{product.price.amount.toFixed(2)} {product.price.currency}</p>
               </div>
             </Link>
           </div>

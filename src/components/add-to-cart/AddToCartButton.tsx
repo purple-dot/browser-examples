@@ -48,7 +48,7 @@ export function AddToCartButton({ product }: { product: Product }) {
     <button
       type='button'
       disabled={loading}
-      className='bg-purple-600 w-full text-white py-3 px-6 rounded-lg font-semibold hover:bg-purple-700 transition-colors disabled:opacity-50'
+      className='bg-purple-600 w-full text-white py-3 px-6 rounded-lg font-semibold hover:bg-purple-700 transition-colors disabled:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed'
       onClick={() => {
         alert('Added to main cart');
       }}
