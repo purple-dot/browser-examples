@@ -13,7 +13,7 @@ PurpleDot.init({
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='/browser-examples/'>
       <Routes>
         <Route element={<Layout />}>
           <Route path='/' element={<ProductList />} />
