@@ -4,7 +4,7 @@ import { openExpressCheckout } from '@purple-dot/browser/checkout';
 import { ErrorMessage } from '../ErrorMessage';
 import { LearnMore } from '../LearnMore';
 
-export function PreOrderExpressButton({ product }: { product: Product }) {
+export function PreOrderExpressButton({ product, releaseId }: { product: Product; releaseId: string }) {
   const [error, setError] = useState<string | null>(null);
 
   const onPreOrderExpressClick = useCallback(() => {
@@ -13,11 +13,11 @@ export function PreOrderExpressButton({ product }: { product: Product }) {
     // open the express checkout immediately
     openExpressCheckout({
       variantId: product.variantId,
-      releaseId: product.releaseId,
+      releaseId,
       currency: product.price.currency,
       quantity: 1,
     });
-  }, [product]);
+  }, [product, releaseId]);
 
   return (
     <>

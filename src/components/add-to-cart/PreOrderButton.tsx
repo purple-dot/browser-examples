@@ -4,7 +4,7 @@ import { purpleDotCheckout } from '@purple-dot/browser/checkout';
 import { ErrorMessage } from '../ErrorMessage';
 import { LearnMore } from '../LearnMore';
 
-export function PreOrderButton({ product }: { product: Product }) {
+export function PreOrderButton({ product, releaseId }: { product: Product; releaseId: string }) {
   const [error, setError] = useState<string | null>(null);
 
   const onPreOrderClick = useCallback(() => {
@@ -13,7 +13,7 @@ export function PreOrderButton({ product }: { product: Product }) {
     purpleDotCheckout(async (element) => {
       const res = await element.addItem({
         variantId: product.variantId,
-        releaseId: product.releaseId,
+        releaseId,
         currency: product.price.currency,
         quantity: 1,
       });
@@ -25,7 +25,7 @@ export function PreOrderButton({ product }: { product: Product }) {
         setError(res.error.message);
       }
     });
-  }, [product]);
+  }, [product, releaseId]);
 
   return (
     <>

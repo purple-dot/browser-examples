@@ -10,6 +10,7 @@ export default defineConfig({
     include: [
       '@purple-dot/browser',
       '@purple-dot/browser/api',
+      '@purple-dot/browser/availability',
       '@purple-dot/browser/checkout',
       '@purple-dot/browser/cart',
       '@purple-dot/browser/shopify-ajax-cart',
