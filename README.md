@@ -23,4 +23,4 @@ Navigate to http://localhost:5173 to view the demo.
 
 ## Further reading
 
-Please see the [@purple-dot/browser package](https://github.com/purple-dot/browser) and [related documentation](https://docs.getpurpledot.com/docs/platform-integration-with-shopify/integrate-purple-dot-with-your-storefront) to learn more.
+Please see the [@purple-dot/browser package](https://github.com/purple-dot/browser) and [related documentation](https://docs.getpurpledot.com/e-commerce-platforms/shopify/integrate-with-a-headless-storefront) to learn more.
