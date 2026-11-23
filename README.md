@@ -1,6 +1,6 @@
 # Browser examples
 
-This repository shows how to use [@purple-dot/browser](https://github.com/purple-dot/browser) to build a headless pre-order integration with [Purple Dot](https://purpledotprice.com).
+This repository shows how to use [@purple-dot/browser](https://github.com/purple-dot/browser) to build a headless pre-order integration with [Purple Dot](https://getpurpledot.com).
 
 ## Points of interest
 
